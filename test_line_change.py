@@ -7,7 +7,7 @@ import json
 def get_line_changes(patch_file_path, sha_id, project_path, project_name=''):
     patch_obj = get_patch_obj(patch_file_path, sha_id, project_path)
     diff_hunk_list = patch_obj.diff_list
-    print(diff_hunk_list)
+    print(diff_hunk_list,patch_obj)
     line_changes = []
     for hunk in diff_hunk_list:
         if hunk.changes:
